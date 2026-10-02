@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: broken-05
+data:
+  COUNTRY: NO
+  DEBUG: yes
+  APP_VERSION: 1.10

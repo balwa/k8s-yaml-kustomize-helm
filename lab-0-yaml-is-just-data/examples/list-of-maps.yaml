@@ -1,0 +1,6 @@
+# The shape you will see EVERYWHERE in Kubernetes: a list whose items are maps.
+containers:
+  - name: web              # <- the "- " starts item #1; name/image belong to it
+    image: nginx
+  - name: sidecar          # <- item #2
+    image: busybox

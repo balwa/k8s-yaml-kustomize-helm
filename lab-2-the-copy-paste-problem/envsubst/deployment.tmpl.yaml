@@ -1,0 +1,27 @@
+# A "homemade template": ${VARS} get replaced by envsubst from your shell environment.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    app: web
+spec:
+  replicas: ${REPLICAS}
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: podinfo
+          image: ghcr.io/stefanprodan/podinfo:${IMAGE_TAG}
+          ports:
+            - containerPort: 9898
+          env:
+            - name: PODINFO_UI_MESSAGE
+              value: ${MESSAGE}
+            - name: PODINFO_UI_COLOR
+              value: "${COLOR}"

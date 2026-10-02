@@ -1,0 +1,13 @@
+# A comment. YAML ignores everything after '#'.
+name: Asha                 # a string (quotes are optional... usually)
+year: 2                    # a number
+graduating: false          # a boolean
+courses:                   # a LIST: each item starts with "- "
+  - CS101
+  - MATH201
+advisor:                   # a MAP (dictionary): nested keys, indented
+  name: Dr. Rao
+  office: B-214
+bio: |                     # a multi-line string: keeps the line breaks
+  Likes distributed systems.
+  Dislikes indentation errors.

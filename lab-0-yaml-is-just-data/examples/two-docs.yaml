@@ -1,0 +1,6 @@
+# "---" separates documents. One file, two separate objects.
+kind: Fruit
+name: mango
+---
+kind: Fruit
+name: guava
